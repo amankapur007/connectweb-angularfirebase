@@ -7,5 +7,9 @@ export const environment = {
     projectId: "connectwe-7822f",
     storageBucket: "connectwe-7822f.appspot.com",
     messagingSenderId: "604757632072"
+  },
+  status:{
+    online:'ONLINE',
+    offline:'OFFLINE'
   }
 };

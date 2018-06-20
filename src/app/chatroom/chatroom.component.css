@@ -1,0 +1,35 @@
+@media (min-width: 767px) {
+    .nav-side-menu .menu-list .menu-content {
+      display: block;
+    }
+    #main {
+        width:calc(100% - 300px);
+        float: right;
+    }
+  }
+#output{
+  height: 80vh;
+  background-color:white;
+  color: #2e353d;
+  overflow: auto;
+}
+#id {
+        height:calc(100% - 70vh);
+    }
+
+.board{
+  padding-left: 0px;
+  border-left: 5px solid #2e353d;
+  list-style: none;
+    padding: 0px;
+    margin: 0px;
+    line-height: 25px;
+    cursor: pointer;
+    overflow: auto;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: 200;
+    background-color: white;
+    top: 0px;
+    color: #2e353d;
+}

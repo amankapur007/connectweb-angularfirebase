@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row" style="margin-top: 5%">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h4><kbd>Login</kbd></h4>
+      <form #loginForm="ngForm">
+        <span *ngIf="error">{{error.msg}}</span>
+        <div class="input-group" style="margin-top: 1%;margin-bottom: 1%">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-user"></i>
+          </span>
+          <input id="email" type="text" [(ngModel)]="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="input-group" style="padding: 1%;position: absolute;
+        right: 4%;">
+            <button [disabled]="!loginForm.form.valid" class="btn btn-default"
+             (click)="loginWithGoogle()" type="submit">Login with google</button>
+          </div>
+      </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>

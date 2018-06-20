@@ -1,0 +1,14 @@
+<div class="nav-side-menu">
+  <div class="brand">Brand Logo</div>
+  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  <div class="menu-list">
+
+    <ul id="menu-content" class="menu-content collapse out">
+      <li *ngFor="let user of users | async">
+        <span><img style="width:10%" [src]="user.photourl" alt="profile"></span>
+        <span style="margin-left: 2%">{{user.displayName}}</span>
+        <span style="position: relative;float:right;margin-right:5%"><i [class]="user.status=='ONLINE'?'fa fa-circle fa-lg online':'fa fa-circle fa-lg offline'"></i></span>
+      </li>
+    </ul>
+  </div>
+</div>

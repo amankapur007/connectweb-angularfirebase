@@ -1,0 +1,38 @@
+<div>
+  <div>
+      <app-userslist></app-userslist>
+  </div>
+  <div class="" id="main">
+      <div class="row">
+          <div class="col-md-12">
+              <div #output id="output">
+                <div *ngFor="let message of messages | async" class="board" style="margin-top: 1%">
+                    <div style="display: flex;width: 100%">
+                    <div style="width: 18%;word-wrap: break-word;  
+                    padding-left: 1%;  
+                    margin: 1%;
+                    background-color: #2e353d;
+                    border-radius: 6px;
+                    color: whitesmoke;">
+                        {{message.displayName}} {{message.timeStamp}}
+                    </div>
+                    <div style="width: 82%;word-wrap: break-word;"> {{message.message}} </div>
+                </div>
+                </div>
+              </div>
+              <div id="msg" style="margin: 1%">
+                  <div class="input-group">
+                      <span class="input-group-addon">{{name}}</span>
+                      <input type="text" class="form-control" [(ngModel)]="message" placeholder="Type your message..">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit" (click)="sendMessage()">
+                            <i class="fa fa-send"></i>
+                        </button>
+                      </span>
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
